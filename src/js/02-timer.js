@@ -19,6 +19,7 @@ const options = {
   time_24hr: true,
   defaultDate: new Date(),
   minuteIncrement: 1,
+  
   onClose(selectedDates) {
     if (selectedDates[0] < Date.now()) {
       timer.buttonStart.disabled = true;
@@ -70,7 +71,7 @@ function onStartTimer() {
     const currentDate = Date.now();
     const deltaDate = selectedDate - currentDate;
     const time = convertMs(deltaDate);
-    if (deltaDate < 1000) {
+    if (deltaDate < 100) {
       clearInterval(timer);
       timer.inputDate.disabled = false;
     }

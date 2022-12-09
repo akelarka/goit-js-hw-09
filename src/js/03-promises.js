@@ -24,6 +24,7 @@ function submint(evt) {
       });
     dataForm.delay += dataForm.step;
   }
+  form.reset();
 
   return dataForm;
 }

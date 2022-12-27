@@ -23,7 +23,7 @@ const options = {
   onClose(selectedDates) {
     if (selectedDates[0] < Date.now()) {
       timer.buttonStart.disabled = true;
-      Notiflix.Notify.failure('выберите дату в будущем');
+      Notiflix.Notify.failure('оберіть дату в майбутньому');
     } else {
       timer.buttonStart.disabled = false;
       selectedDate = selectedDates[0];
